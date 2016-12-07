@@ -12,6 +12,8 @@ namespace checkbooks
 
 		public string Type { get; set; }
 
+		public string Subtype { get; set; }
+
 		public DateTime Date { get; set; }
 	}
 }

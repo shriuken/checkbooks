@@ -2,4 +2,14 @@
 <resources>
 	<string name="transaction_db">transactions.db</string>
 	<string name="app_name">checkbooks</string>
+	<string-array name="subtype_array">
+        <item>Groceries</item>
+        <item>Fast Food</item>
+        <item>Clothes</item>
+        <item>Entertainment</item>
+        <item>Housewares</item>
+        <item>Rent</item>
+        <item>Paycheck</item>
+        <item>Misc</item>
+    </string-array>
 </resources>

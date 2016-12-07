@@ -24,12 +24,13 @@
             android:layout_height="match_parent"
             android:id="@+id/dollar"
             android:width="0dp"
-            android:layout_weight="7"
-            android:layout_marginRight="-10.0dp"
+            android:layout_weight="6.5"
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:gravity="center"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:layout_marginRight="-10dp"
+            android:layout_marginLeft="-20dp" />
         <EditText
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
@@ -37,19 +38,26 @@
             android:id="@+id/Amount"
             android:layout_weight="3"
             android:width="0dp"
-            android:hint="0" />
-        <Button
-            android:text="+"
-            android:id="@+id/Deposit"
+            android:hint="0"
+            android:layout_marginLeft="-10dp" />
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/TypeSpinner"
             android:layout_weight="6"
-            android:width="0dp" />
+            android:scrollbarStyle="outsideOverlay" />
         <Button
             android:text="-"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/Withdraw"
+            android:layout_weight="6"
+            android:width="0dp" />
+        <Button
+            android:text="+"
+            android:id="@+id/Deposit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="6"
             android:width="0dp" />
     </LinearLayout>
