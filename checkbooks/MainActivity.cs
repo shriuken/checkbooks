@@ -58,7 +58,8 @@ namespace checkbooks
 			
 			_typeAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 			_typeSpinner.Adapter = _typeAdapter;
-
+			// TODO: Change this to a button that leads into a new activity. Maybe make circular for grins/giggles.
+			// TODO: Add progress bar to track toward monthly limit.
 			_addTransaction.Click += (sender, e) =>
 			{
 				if (_amount.Text != "")
