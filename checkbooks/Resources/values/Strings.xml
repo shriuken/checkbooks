@@ -7,9 +7,8 @@
         <item>Fast Food</item>
         <item>Clothes</item>
         <item>Entertainment</item>
-        <item>Housewares</item>
         <item>Rent</item>
-        <item>Paycheck</item>
-        <item>Misc</item>
+        <item>Misc Expense</item>
+        <item>Income</item>
     </string-array>
 </resources>

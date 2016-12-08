@@ -29,8 +29,7 @@ namespace checkbooks
 
 		protected ListView _transactionListView;
 		protected List<string> mItems;
-		protected Button _deposit;
-		protected Button _withdraw;
+		protected Button _addTransaction;
 		protected EditText _amount;
 		protected TransactionAdapter _transactionAdapter;
 		protected ArrayAdapter _typeAdapter;
@@ -45,17 +44,14 @@ namespace checkbooks
 
 			// create db connection?
 			string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-			/* var conn = new SQLiteAsyncConnection(System.IO.Path.Combine(folder, Resources.GetString(Resource.String.transaction_db)));
-			conn.CreateTableAsync<Transaction>();
 
-			var syncConn = new SQLiteConnection(System.IO.Path.Combine(folder, Resources.GetString(Resource.String.transaction_db)));
-			syncConn.CreateTable<Transaction>();*/
+			// TODO: Figure out if it's better to keep a type + subtype, or infer overarching type on the subtype.
+			// TODO: Should the user be able to select + or -? They're not gonna get Groceries as a +. 
 
-			_deposit = FindViewById<Button>(Resource.Id.Deposit);
-			_withdraw = FindViewById<Button>(Resource.Id.Withdraw);
-			_amount = FindViewById<EditText>(Resource.Id.Amount);
+			_addTransaction = FindViewById<Button>(Resource.Id.AddTransaction);
 			_transactionListView = FindViewById<ListView>(Resource.Id.RecentActivity);
 			_typeSpinner = FindViewById<Spinner>(Resource.Id.TypeSpinner);
+			_amount = FindViewById<EditText>(Resource.Id.Amount);
 
 			_typeAdapter = ArrayAdapter.CreateFromResource(
 				this, Resource.Array.subtype_array, Android.Resource.Layout.SimpleSpinnerItem);
@@ -63,54 +59,29 @@ namespace checkbooks
 			_typeAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 			_typeSpinner.Adapter = _typeAdapter;
 
-			_deposit.Click += (sender, e) =>
+			_addTransaction.Click += (sender, e) =>
 			{
-				Transaction transaction = new Transaction
+				if (_amount.Text != "")
 				{
-					Amount = Convert.ToDecimal(_amount.Text),
-					Type = "Deposit",
-					Subtype = _typeSpinner.SelectedItem.ToString(),
-					Date = DateTime.Now
-				};
+					Transaction transaction = new Transaction
+					{
+						Amount = Convert.ToDecimal(_amount.Text),
+						Type = _typeSpinner.SelectedItem.ToString(),
+						Date = DateTime.Now
+					};
 
-				var shit = Android.Content.Context.InputMethodService;
-				InputMethodManager imm = (InputMethodManager)GetSystemService(shit);
-				imm.HideSoftInputFromWindow(_amount.WindowToken, HideSoftInputFlags.None);
+					var shit = Android.Content.Context.InputMethodService;
+					InputMethodManager imm = (InputMethodManager)GetSystemService(shit);
+					imm.HideSoftInputFromWindow(_amount.WindowToken, HideSoftInputFlags.None);
 
-				_transactionAdapter.Insert(transaction, 0);
-				_transactionListView.SmoothScrollToPosition(0);
-				Toast.MakeText(this, "Transaction added!", ToastLength.Short).Show();
-				_amount.SetText("", TextView.BufferType.Editable);
-			}; // TODO: Move this into a function. And make prettier. Current display hideous. TODO: Add logic for type/subtype
+					_transactionAdapter.Insert(transaction, 0);
+					_transactionListView.SmoothScrollToPosition(0);
+					Toast.MakeText(this, "Transaction added!", ToastLength.Short).Show();
+					_amount.SetText("", TextView.BufferType.Editable);
+				}
+			}; // TODO: Move this into a function. And make prettier. Current display hideous. TODO: Improve logic for type/subtype
 
-			_withdraw.Click += (sender, e) =>
-			{
-				Transaction transaction = new Transaction
-				{
-					Amount = Convert.ToDecimal(_amount.Text),
-					Type = "Withdrawal",
-					Subtype = _typeSpinner.SelectedItem.ToString(),
-					Date = DateTime.Now
-				};
-
-				var shit = Android.Content.Context.InputMethodService;
-				InputMethodManager imm = (InputMethodManager)GetSystemService(shit);
-				imm.HideSoftInputFromWindow(_amount.WindowToken, HideSoftInputFlags.None);
-
-				_transactionAdapter.Insert(transaction, 0);
-				_transactionListView.SmoothScrollToPosition(0);
-				Toast.MakeText(this, "Transaction added!", ToastLength.Short).Show();
-				_amount.SetText("", TextView.BufferType.Editable);
-
-			};// TODO: Move this into a function. And make prettier. Current display hideous. TODO: Add logic for type/subtype.
-
-			// var query = syncConn.Table<Transaction>().Take(30).OrderByDescending(x => x.Date);
-
-			// ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, R.id.text1, new String[] { "a", "b"});
-
-			// mListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
-
-			// I think this needs to somehow get all the.. oh! From the database.abase.
+			// I think this needs to somehow get all the.. oh! From the database.
 			_transactionAdapter = new TransactionAdapter(this, System.IO.Path.Combine(folder, Resources.GetString(Resource.String.transaction_db)));
 			_transactionListView.Adapter = _transactionAdapter;
 		}

@@ -72,12 +72,10 @@ namespace checkbooks
 			var view = convertView ?? _activity.LayoutInflater.Inflate(Resource.Layout.TransactionItem, parent, false);
 
 			var transactionType = view.FindViewById<TextView>(Resource.Id.TransactionType);
-			var transactionSubType = view.FindViewById<TextView>(Resource.Id.TransactionSubtype);
 			var transactionAmount = view.FindViewById<TextView>(Resource.Id.TransactionAmount);
 			var transactionDate = view.FindViewById<TextView>(Resource.Id.TransactionDate);
 
 			transactionType.Text = _transactionList[position].Type;
-			transactionSubType.Text = _transactionList[position].Subtype;
 			transactionAmount.Text = "$" + _transactionList[position].Amount.ToString();
 			transactionDate.Text = _transactionList[position].Date.ToShortDateString();
 

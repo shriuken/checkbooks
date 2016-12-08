@@ -41,21 +41,13 @@
             android:hint="0"
             android:layout_marginLeft="-10dp" />
         <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/TypeSpinner"
-            android:layout_weight="6"
-            android:scrollbarStyle="outsideOverlay" />
-        <Button
-            android:text="-"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/Withdraw"
-            android:layout_weight="6"
-            android:width="0dp" />
+            android:scrollbarStyle="outsideOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
         <Button
             android:text="+"
-            android:id="@+id/Deposit"
+            android:id="@+id/AddTransaction"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="6"

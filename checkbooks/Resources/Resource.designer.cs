@@ -60,41 +60,35 @@ namespace checkbooks
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060005
+			public const int AddTransaction = 2131099653;
+			
 			// aapt resource value: 0x7f060003
 			public const int Amount = 2131099651;
-			
-			// aapt resource value: 0x7f060006
-			public const int Deposit = 2131099654;
 			
 			// aapt resource value: 0x7f060000
 			public const int RecentActivity = 2131099648;
 			
-			// aapt resource value: 0x7f06000a
-			public const int TransactionAmount = 2131099658;
-			
-			// aapt resource value: 0x7f06000d
-			public const int TransactionDate = 2131099661;
-			
-			// aapt resource value: 0x7f060007
-			public const int TransactionRow = 2131099655;
-			
-			// aapt resource value: 0x7f060008
-			public const int TransactionSubRow1 = 2131099656;
+			// aapt resource value: 0x7f060009
+			public const int TransactionAmount = 2131099657;
 			
 			// aapt resource value: 0x7f06000b
-			public const int TransactionSubRow2 = 2131099659;
+			public const int TransactionDate = 2131099659;
 			
-			// aapt resource value: 0x7f06000c
-			public const int TransactionSubtype = 2131099660;
+			// aapt resource value: 0x7f060006
+			public const int TransactionRow = 2131099654;
 			
-			// aapt resource value: 0x7f060009
-			public const int TransactionType = 2131099657;
+			// aapt resource value: 0x7f060007
+			public const int TransactionSubRow1 = 2131099655;
+			
+			// aapt resource value: 0x7f06000a
+			public const int TransactionSubRow2 = 2131099658;
+			
+			// aapt resource value: 0x7f060008
+			public const int TransactionType = 2131099656;
 			
 			// aapt resource value: 0x7f060004
 			public const int TypeSpinner = 2131099652;
-			
-			// aapt resource value: 0x7f060005
-			public const int Withdraw = 2131099653;
 			
 			// aapt resource value: 0x7f060002
 			public const int dollar = 2131099650;

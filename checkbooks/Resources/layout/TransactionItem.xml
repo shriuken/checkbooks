@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/TransactionSubRow1">
         <TextView
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/TransactionType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,15 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TransactionSubRow2">
-        <TextView
-            android:text="Small Text"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:id="@+id/TransactionSubtype"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:width="0dp"
-            android:layout_weight="1"
-            android:layout_gravity="left" />
         <TextView
             android:text="Small Text"
             android:textAppearance="?android:attr/textAppearanceSmall"
