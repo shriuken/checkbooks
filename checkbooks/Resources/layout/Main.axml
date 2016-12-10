@@ -12,15 +12,6 @@
         android:layout_height="match_parent"
         android:id="@+id/RecentActivity"
         android:layout_weight="1" />
-    <ProgressBar xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/BudgetProgress"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        tools:visibility="visible"
-        android:layout_below="@id/RecentActivity"
-        android:layout_centerHorizontal="true" />
     <com.refractored.fab.FloatingActionButton xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/AddTransactionFab"
         android:layout_width="wrap_content"
