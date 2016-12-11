@@ -105,6 +105,9 @@
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\TransactionAdapter.cs" />
     <Compile Include="AddTransactionActivity.cs" />
+    <Compile Include="Utilities\NumericRangeFilter.cs" />
+    <Compile Include="Utilities\Utils.cs" />
+    <Compile Include="Utilities\AmountOnFocusChangeListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -126,6 +129,7 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Models\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="sqlite-net">
