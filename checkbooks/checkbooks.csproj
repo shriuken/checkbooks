@@ -90,6 +90,7 @@
     <Compile Include="Utilities\NumericRangeFilter.cs" />
     <Compile Include="Utilities\Utils.cs" />
     <Compile Include="Utilities\AmountOnFocusChangeListener.cs" />
+    <Compile Include="Models\TransactionAdapterViewHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -109,7 +110,7 @@
     <AndroidResource Include="Resources\layout\AddTransaction.axml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
-    <AndroidResource Include="Resources\layout\content_main.axml" />
+    <AndroidResource Include="Resources\layout\TransactionList.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

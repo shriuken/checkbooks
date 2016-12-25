@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/TransactionRow">
-    <LinearLayout
-        android:orientation="horizontal"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TransactionSubRow1">
-        <TextView
-            android:text="Large Text"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/TransactionType"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:width="0dp"
-            android:layout_weight="1"
-            android:layout_gravity="left" />
-        <TextView
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/TransactionSubRow1">
+            <TextView
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/TransactionType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="left" />
+            <TextView
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TransactionAmount"
+                android:width="0dp"
+                android:layout_weight="1"
+                android:phoneNumber="true"
+                android:gravity="right" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TransactionAmount"
-            android:width="0dp"
-            android:layout_weight="1"
-            android:phoneNumber="true"
-            android:gravity="right" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TransactionSubRow2">
-        <TextView
-            android:text="Small Text"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TransactionDate"
-            android:layout_weight="1"
-            android:gravity="right" />
-    </LinearLayout>
-</LinearLayout>
+            android:id="@+id/TransactionSubRow2">
+            <TextView
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TransactionDate"
+                android:layout_weight="1"
+                android:gravity="right" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

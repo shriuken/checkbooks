@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Android.Support.V7.Widget;
 using Android.App;
 using Android.Content;
 using Android.Provider;
@@ -9,7 +10,7 @@ using SQLite;
 
 namespace checkbooks
 {
-	public class TransactionAdapter : BaseAdapter
+	public class TransactionAdapter : RecyclerView.Adapter
 	{
 		List<Transaction> _transactionList;
 		Activity _activity;
@@ -18,7 +19,7 @@ namespace checkbooks
 
 		public TransactionAdapter(Activity activity, string path)
 		{
-			// TODO: 
+			// TODO: Figure out what this to-do is.
 			_activity = activity;
 			_numResults = 50;
 			_path = path;
@@ -53,21 +54,44 @@ namespace checkbooks
 			conn.Close();
 		}
 
-		public override int Count {
+		public override int ItemCount {
 			get { return _transactionList.Count; }
 		}
 
-		public override Java.Lang.Object GetItem(int position)
+		public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
+		{
+			var id = Resource.Layout.TransactionItem;
+			var itemView = LayoutInflater.From(parent.Context).Inflate(id, parent, false);
+
+			return new TransactionAdapterViewHolder(itemView);
+		}
+
+		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
+		{
+			var item = _transactionList[position];
+
+			// Replace the contents of the view with that element
+			var viewHolder = holder as TransactionAdapterViewHolder;
+			/* holder.Caption.Text = item.Title; */
+			/* transactionType.Text = _transactionList[position].Type;
+			transactionAmount.Text = "$" + _transactionList[position].Amount.ToString();
+			transactionDate.Text = _transactionList[position].Date.ToShortDateString(); */
+			// viewHolder is transactionList[position], i think.
+			//TODO: Figure out this adapter and viewholder stuff.
+
+		}
+
+		/* public override Java.Lang.Object GetItem(int position)
 		{
 			throw new NotImplementedException();
-		}
+		} */
 
 		public override long GetItemId(int position)
 		{
 			return _transactionList[position].ID;
 		}
 
-		public override View GetView(int position, View convertView, ViewGroup parent)
+		/* public override View GetView(int position, View convertView, ViewGroup parent)
 		{
 			var view = convertView ?? _activity.LayoutInflater.Inflate(Resource.Layout.TransactionItem, parent, false);
 
@@ -80,7 +104,7 @@ namespace checkbooks
 			transactionDate.Text = _transactionList[position].Date.ToShortDateString();
 
 			return view;
-		}
+		} */
 
 		/** Creates an SQLite Connection to the Database stored in _path. Don't forget to close this database! */
 		protected SQLiteConnection CreateAndReturnMyDB()
