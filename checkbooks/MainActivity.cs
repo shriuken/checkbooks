@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace checkbooks
 {
 	[Activity(Label = "checkbooks", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : Activity
+	public class MainActivity : Android.Support.V7.App.AppCompatActivity
 	{
 		
 		protected ListView _transactionListView;

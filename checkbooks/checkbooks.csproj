@@ -108,7 +108,8 @@
     <AndroidResource Include="Resources\layout\TransactionItem.xml" />
     <AndroidResource Include="Resources\layout\AddTransaction.axml" />
     <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\layout\content_main.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
