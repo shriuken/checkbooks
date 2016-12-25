@@ -1,11 +1,12 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Support.Design.Widget;
 using System;
 using SQLite;
 using Android.Views.InputMethods;
 using System.Collections.Generic;
-using com.refractored.fab;
+
 
 namespace checkbooks
 {
@@ -16,7 +17,6 @@ namespace checkbooks
 		protected ListView _transactionListView;
 		protected TransactionAdapter _transactionAdapter;
 		protected FloatingActionButton _addTransactionFab;
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -26,14 +26,14 @@ namespace checkbooks
 
 			_transactionListView = FindViewById<ListView>(Resource.Id.RecentActivity);
 
-			_addTransactionFab = FindViewById<FloatingActionButton>(Resource.Id.AddTransactionFab);
-			_addTransactionFab.AttachToListView(_transactionListView);
+			// _addTransactionFab = FindViewById<FloatingActionButton>(Resource.Id.AddTransactionFab);
+			// _addTransactionFab.AttachToListView(_transactionListView);
 
 			// TODO: Add progress bar to track toward monthly limit.
 
-			_addTransactionFab.Click += delegate {
+			/* _addTransactionFab.Click += delegate {
 				StartActivity(typeof(AddTransaction));
-			};
+			};*/
 			/* {
 					Transaction transaction = new Transaction
 					{
@@ -55,9 +55,9 @@ namespace checkbooks
 			}; // TODO: Move this into a function. And make prettier. Current display hideous. TODO: Improve logic for type/subtype
 */
 			// I think this needs to somehow get all the.. oh! From the database.
-			string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-			_transactionAdapter = new TransactionAdapter(this, System.IO.Path.Combine(folder, Resources.GetString(Resource.String.transaction_db)));
-			_transactionListView.Adapter = _transactionAdapter;
+			// string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+			// _transactionAdapter = new TransactionAdapter(this, System.IO.Path.Combine(folder, Resources.GetString(Resource.String.transaction_db)));
+			// _transactionListView.Adapter = _transactionAdapter;
 		}
 	}
 }
