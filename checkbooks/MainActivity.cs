@@ -24,7 +24,7 @@ namespace checkbooks
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
-			_transactionListView = FindViewById<ListView>(Resource.Id.RecentActivity);
+			// _transactionListView = FindViewById<ListView>(Resource.Id.RecentActivity);
 
 			// _addTransactionFab = FindViewById<FloatingActionButton>(Resource.Id.AddTransactionFab);
 			// _addTransactionFab.AttachToListView(_transactionListView);
