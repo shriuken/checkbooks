@@ -46,7 +46,7 @@ namespace checkbooks
 			_transactionsLayoutManager = new LinearLayoutManager(this);
 			_transactionsRecyclerView.SetLayoutManager(_transactionsLayoutManager);
 
-			_addTransactionFab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+			_addTransactionFab = FindViewById<FloatingActionButton>(Resource.Id.AddTransactionFab);
 			// _addTransactionFab.AttachToListView(_transactionListView);
 
 			// TODO: Add progress bar to track toward monthly limit.
