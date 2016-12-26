@@ -1868,29 +1868,29 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0069
 			public const int Amount = 2131361897;
 			
-			// aapt resource value: 0x7f0a0085
-			public const int TransactionAmount = 2131361925;
+			// aapt resource value: 0x7f0a0086
+			public const int TransactionAmount = 2131361926;
 			
-			// aapt resource value: 0x7f0a0087
-			public const int TransactionDate = 2131361927;
-			
-			// aapt resource value: 0x7f0a0082
-			public const int TransactionRow = 2131361922;
+			// aapt resource value: 0x7f0a0088
+			public const int TransactionDate = 2131361928;
 			
 			// aapt resource value: 0x7f0a0083
-			public const int TransactionSubRow1 = 2131361923;
-			
-			// aapt resource value: 0x7f0a0086
-			public const int TransactionSubRow2 = 2131361926;
+			public const int TransactionRow = 2131361923;
 			
 			// aapt resource value: 0x7f0a0084
-			public const int TransactionType = 2131361924;
+			public const int TransactionSubRow1 = 2131361924;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int TransactionsRecyclerView = 2131361907;
+			// aapt resource value: 0x7f0a0087
+			public const int TransactionSubRow2 = 2131361927;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int action0 = 2131361909;
+			// aapt resource value: 0x7f0a0085
+			public const int TransactionType = 2131361925;
+			
+			// aapt resource value: 0x7f0a0074
+			public const int TransactionsRecyclerView = 2131361908;
+			
+			// aapt resource value: 0x7f0a0076
+			public const int action0 = 2131361910;
 			
 			// aapt resource value: 0x7f0a005a
 			public const int action_bar = 2131361882;
@@ -1916,8 +1916,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a005b
 			public const int action_context_bar = 2131361883;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int action_divider = 2131361913;
+			// aapt resource value: 0x7f0a007a
+			public const int action_divider = 2131361914;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int action_menu_divider = 2131361796;
@@ -1952,8 +1952,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0044
 			public const int buttonPanel = 2131361860;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int cancel_action = 2131361910;
+			// aapt resource value: 0x7f0a0077
+			public const int cancel_action = 2131361911;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int center = 2131361812;
@@ -1967,8 +1967,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0052
 			public const int checkbox = 2131361874;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int chronometer = 2131361916;
+			// aapt resource value: 0x7f0a007d
+			public const int chronometer = 2131361917;
 			
 			// aapt resource value: 0x7f0a001d
 			public const int clip_horizontal = 2131361821;
@@ -2018,8 +2018,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0017
 			public const int end = 2131361815;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int end_padder = 2131361921;
+			// aapt resource value: 0x7f0a0082
+			public const int end_padder = 2131361922;
 			
 			// aapt resource value: 0x7f0a000b
 			public const int enterAlways = 2131361803;
@@ -2036,8 +2036,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0051
 			public const int expanded_menu = 2131361873;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int fab = 2131361908;
+			// aapt resource value: 0x7f0a0075
+			public const int fab = 2131361909;
 			
 			// aapt resource value: 0x7f0a001f
 			public const int fill = 2131361823;
@@ -2066,8 +2066,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a003f
 			public const int image = 2131361855;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int info = 2131361920;
+			// aapt resource value: 0x7f0a0081
+			public const int info = 2131361921;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int item_touch_helper_previous_elevation = 2131361793;
@@ -2075,11 +2075,11 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0019
 			public const int left = 2131361817;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int line1 = 2131361914;
+			// aapt resource value: 0x7f0a007b
+			public const int line1 = 2131361915;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int line3 = 2131361918;
+			// aapt resource value: 0x7f0a007f
+			public const int line3 = 2131361919;
 			
 			// aapt resource value: 0x7f0a0025
 			public const int listMode = 2131361829;
@@ -2087,8 +2087,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0041
 			public const int list_item = 2131361857;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int media_actions = 2131361912;
+			// aapt resource value: 0x7f0a0079
+			public const int media_actions = 2131361913;
 			
 			// aapt resource value: 0x7f0a0034
 			public const int middle = 2131361844;
@@ -2222,8 +2222,8 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a001b
 			public const int start = 2131361819;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int status_bar_latest_event_content = 2131361911;
+			// aapt resource value: 0x7f0a0078
+			public const int status_bar_latest_event_content = 2131361912;
 			
 			// aapt resource value: 0x7f0a0065
 			public const int submit_area = 2131361893;
@@ -2231,23 +2231,26 @@ namespace checkbooks
 			// aapt resource value: 0x7f0a0026
 			public const int tabMode = 2131361830;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int text = 2131361919;
+			// aapt resource value: 0x7f0a0080
+			public const int text = 2131361920;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int text2 = 2131361917;
+			// aapt resource value: 0x7f0a007e
+			public const int text2 = 2131361918;
 			
 			// aapt resource value: 0x7f0a004d
 			public const int textSpacerNoButtons = 2131361869;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int time = 2131361915;
+			// aapt resource value: 0x7f0a007c
+			public const int time = 2131361916;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int title = 2131361859;
 			
 			// aapt resource value: 0x7f0a0048
 			public const int title_template = 2131361864;
+			
+			// aapt resource value: 0x7f0a0073
+			public const int toolbar = 2131361907;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int top = 2131361820;
@@ -2474,7 +2477,7 @@ namespace checkbooks
 			public const int support_simple_spinner_dropdown_item = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int TransactionItem = 2130968627;
+			public const int TransactionCard = 2130968627;
 			
 			// aapt resource value: 0x7f040034
 			public const int TransactionList = 2130968628;
@@ -3039,6 +3042,12 @@ namespace checkbooks
 			
 			// aapt resource value: 0x7f060002
 			public const int Base_Widget_Design_TabLayout = 2131099650;
+			
+			// aapt resource value: 0x7f060157
+			public const int MaterialTheme = 2131099991;
+			
+			// aapt resource value: 0x7f060158
+			public const int MaterialTheme_Base = 2131099992;
 			
 			// aapt resource value: 0x7f060030
 			public const int Platform_AppCompat = 2131099696;

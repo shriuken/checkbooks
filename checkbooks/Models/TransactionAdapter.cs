@@ -60,19 +60,22 @@ namespace checkbooks
 
 		public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
 		{
-			var id = Resource.Layout.TransactionItem;
+			var id = Resource.Layout.TransactionCard;
 			var itemView = LayoutInflater.From(parent.Context).Inflate(id, parent, false);
 
 			return new TransactionAdapterViewHolder(itemView);
 		}
 
-		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
+		public override void OnBindViewHolder(RecyclerView.ViewHolder vh, int position)
 		{
 			var item = _transactionList[position];
 
 			// Replace the contents of the view with that element
-			var viewHolder = holder as TransactionAdapterViewHolder;
-			/* holder.Caption.Text = item.Title; */
+			var holder = vh as TransactionAdapterViewHolder;
+			holder.Amnt.Text = "$" + item.Amount.ToString();
+			holder.Date.Text = item.Date.ToString();
+			holder.Type.Text = item.Type.ToString();
+			      
 			/* transactionType.Text = _transactionList[position].Type;
 			transactionAmount.Text = "$" + _transactionList[position].Amount.ToString();
 			transactionDate.Text = _transactionList[position].Date.ToShortDateString(); */
