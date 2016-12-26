@@ -46,14 +46,14 @@ namespace checkbooks
 			_transactionsLayoutManager = new LinearLayoutManager(this);
 			_transactionsRecyclerView.SetLayoutManager(_transactionsLayoutManager);
 
-			// _addTransactionFab = FindViewById<FloatingActionButton>(Resource.Id.AddTransactionFab);
+			_addTransactionFab = FindViewById<FloatingActionButton>(Resource.Id.fab);
 			// _addTransactionFab.AttachToListView(_transactionListView);
 
 			// TODO: Add progress bar to track toward monthly limit.
 
-			/* _addTransactionFab.Click += delegate {
+			_addTransactionFab.Click += delegate {
 				StartActivity(typeof(AddTransaction));
-			};*/
+			};
 			/* {
 					Transaction transaction = new Transaction
 					{
