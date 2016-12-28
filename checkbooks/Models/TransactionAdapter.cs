@@ -66,48 +66,22 @@ namespace checkbooks
 			return new TransactionAdapterViewHolder(itemView);
 		}
 
-		public override void OnBindViewHolder(RecyclerView.ViewHolder vh, int position)
+		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
 		{
 			var item = _transactionList[position];
 
 			// Replace the contents of the view with that element
-			var holder = vh as TransactionAdapterViewHolder;
-			holder.Amnt.Text = "$" + item.Amount.ToString();
-			holder.Date.Text = item.Date.ToString();
-			holder.Type.Text = item.Type.ToString();
-			      
-			/* transactionType.Text = _transactionList[position].Type;
-			transactionAmount.Text = "$" + _transactionList[position].Amount.ToString();
-			transactionDate.Text = _transactionList[position].Date.ToShortDateString(); */
-			// viewHolder is transactionList[position], i think.
-			//TODO: Figure out this adapter and viewholder stuff.
+			var h = holder as TransactionAdapterViewHolder;
+			h.Amnt.Text = "$" + item.Amount.ToString();
+			h.Date.Text = item.Date.ToString();
+			h.Type.Text = item.Type.ToString();
 
 		}
-
-		/* public override Java.Lang.Object GetItem(int position)
-		{
-			throw new NotImplementedException();
-		} */
 
 		public override long GetItemId(int position)
 		{
 			return _transactionList[position].ID;
 		}
-
-		/* public override View GetView(int position, View convertView, ViewGroup parent)
-		{
-			var view = convertView ?? _activity.LayoutInflater.Inflate(Resource.Layout.TransactionItem, parent, false);
-
-			var transactionType = view.FindViewById<TextView>(Resource.Id.TransactionType);
-			var transactionAmount = view.FindViewById<TextView>(Resource.Id.TransactionAmount);
-			var transactionDate = view.FindViewById<TextView>(Resource.Id.TransactionDate);
-
-			transactionType.Text = _transactionList[position].Type;
-			transactionAmount.Text = "$" + _transactionList[position].Amount.ToString();
-			transactionDate.Text = _transactionList[position].Date.ToShortDateString();
-
-			return view;
-		} */
 
 		/** Creates an SQLite Connection to the Database stored in _path. Don't forget to close this database! */
 		protected SQLiteConnection CreateAndReturnMyDB()
